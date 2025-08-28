@@ -86,7 +86,7 @@ The database contains three main tables:
 
 ### 🚀 Deployment
 
-- The app is deployed on Vercel: [Live Demo] (https://event-management-system-git-main-mounika-ss-projects-9d0f7aea.vercel.app/?utm_source=chatgpt.com)
+- The app is deployed on Vercel: [Live Demo](https://event-management-system-mu-ten.vercel.app/)
 - Backend powered by Supabase.
 
 ### 📎 Deliverables Summary
