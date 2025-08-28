@@ -42,6 +42,21 @@ The database contains three main tables:
   - Emails are unique in the `Users` table.
   - RSVP status is limited to `Yes / No / Maybe`.
 
+### Screenshots:
+- User table
+![screenshot](/screenshots/Users_Table.png)
+
+- Events table
+![screenshot](/screenshots/Events_Table.png)
+
+- RSVPs table
+![screenshot](/screenshots/RSVPs_Table.png)
+
+- ER Diagram
+![screenshot](/screenshots/Supabase_ERD.png)
+
+
+
 ### 📷 Deliverables
 - **SQL Dump:** `schema.sql`
 - **Database Screenshots:** see `/screenshots/` folder
@@ -88,13 +103,17 @@ The database contains three main tables:
 
 - The app is deployed on Vercel: [Live Demo](https://event-management-system-mu-ten.vercel.app/)
 - Backend powered by Supabase.
+- Vercel View
+  ![screenshot](/screenshots/Vercel_frontend.png)
+  
 
 ### 📎 Deliverables Summary
 
 - SQL Dump: schema.sql
 - ER Diagram & Screenshots: /screenshots/ folder
-- GitHub Repo: [link here]
-- Live Vercel Deployment: [link here]
+- GitHub Repo: [link here](https://github.com/mounika-ss/event-management-system/)
+- Live Vercel Deployment: [link here](https://event-management-system-mu-ten.vercel.app/)
+  
 
 ### 👩‍💻 Author
 
