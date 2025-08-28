@@ -1,3 +1,110 @@
+# 📌 Event Management System – Supabase + Next.js
+
+## 🚀 Overview
+This project is part of the **Database Building/Management Internship Assessment** for PixaBeam Digital Services.  
+It demonstrates a **database schema in Supabase** for managing **Users, Events, and RSVPs**, along with a minimal **Next.js app** connected to Supabase.
+
+---
+
+## 🗄️ Part 1 – Database Design
+
+### 📑 Schema
+The database contains three main tables:
+
+**Users**
+- `id` (Primary Key)
+- `name`
+- `email` (unique)
+- `created_at` (default: now)
+
+**Events**
+- `id` (Primary Key)
+- `title`
+- `description`
+- `date`
+- `city`
+- `created_by` (Foreign Key → Users.id, ON DELETE CASCADE)
+
+**RSVPs**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users.id, ON DELETE CASCADE)
+- `event_id` (Foreign Key → Events.id, ON DELETE CASCADE)
+- `status` (ENUM: Yes / No / Maybe)
+
+### ✅ Design Choices
+- **Primary Keys:** Each table has a unique primary key (`id`) for identification.
+- **Foreign Keys & Constraints:**
+  - `Events.created_by` references `Users.id`.
+  - `RSVPs.user_id` references `Users.id`.
+  - `RSVPs.event_id` references `Events.id`.
+  - All foreign keys use `ON DELETE CASCADE` to ensure referential integrity.
+- **Data Integrity:**
+  - Emails are unique in the `Users` table.
+  - RSVP status is limited to `Yes / No / Maybe`.
+
+### 📷 Deliverables
+- **SQL Dump:** `schema.sql`
+- **Database Screenshots:** see `/screenshots/` folder
+- **ER Diagram:** see `/screenshots/ERD.png`
+
+---
+
+## 🌐 Part 2 – Bonus (Next.js + Supabase App)
+
+### Features
+- **Event Listing Page:** Displays all upcoming events from the `Events` table.
+- **RSVP Page:** Allows users to RSVP to an event with options: Yes, No, Maybe.
+
+### Tech Stack
+- **Frontend:** Next.js (React + TailwindCSS)
+- **Backend:** Supabase (Postgres + Auth + API)
+- **Deployment:** Vercel
+
+### 🔧 Setup Instructions
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/<your-username>/event-management-system.git
+   cd event-management-system
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+
+3. **Configure environment variables:**
+   Create a .env.local file in the root folder with:
+   ```bash
+   NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+
+4. **Run locally:**
+   ```bash
+   npm run dev
+
+5. **Open in browser:**
+   ```
+   http://localhost:3000
+
+### 🚀 Deployment
+
+- The app is deployed on Vercel: [Live Demo] (https://event-management-system-git-main-mounika-ss-projects-9d0f7aea.vercel.app/?utm_source=chatgpt.com)
+- Backend powered by Supabase.
+
+### 📎 Deliverables Summary
+
+- SQL Dump: schema.sql
+- ER Diagram & Screenshots: /screenshots/ folder
+- GitHub Repo: [link here]
+- Live Vercel Deployment: [link here]
+
+### 👩‍💻 Author
+
+**Mounika Seelam**
+
+Database Management & Frontend Development Enthusiast
+
+---
+-----
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -43,3 +150,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Here my project links
 - Github - https://github.com/mounika-ss/event-management-system
 - Vercel - https://event-management-system-mu-ten.vercel.app/
+
+- 
